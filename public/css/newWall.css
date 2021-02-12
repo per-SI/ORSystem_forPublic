@@ -1,0 +1,135 @@
+#selectForm{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#nameANDname{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#shopSelected{
+    height: 25px;
+    width: 150px;
+    position: relative;
+    background-color: ivory;
+}
+
+#shopName{
+    height: 25px;
+    width: 150px;
+    position: relative;
+    background-color: ivory;
+    border: 0.5px solid;
+    padding: 0 3px;
+}
+
+#SelectorNamerBTN{
+    border: 0.5px solid black;
+    border-radius: 15%;
+    background-color: aliceblue;
+    width: 85px;
+    height: 20px;
+    margin: 10px;
+    margin-left: 48px;
+    font-size: 5px;
+}
+
+#wallNameContainer{
+    margin-left: 25px;
+    margin-bottom: 40px;
+}
+
+#QofXY{
+    margin-left: 100px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#QofRow{
+    background-color: ivory;
+}
+
+#QofColumn{
+    background-color: ivory;
+}
+
+#decideToCreate{
+    height: 24px;
+    width: 40px;
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -30px;
+}
+
+#previewContainer{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 20px;
+    margin-top:45px;
+    align-items: center;
+}
+
+
+#previewInfo{
+    position: relative;
+    margin-bottom: 10px;
+    height: 40px;
+    min-height: 20px;
+}
+
+#previewShop{
+    color: gray;
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+#previewWall{
+    color: darkred;
+    font-size: 16px;
+}
+
+#previewXY{
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    min-width: 20vw;
+    min-height: 20vw;
+    background-color: rgb(139, 155, 171);
+    padding: 10px;
+}
+
+.Y{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: nowrap;
+}
+
+.X{
+    position: relative;
+    width: 3vw;
+    height: 4vw;
+    border: solid 1px black;
+    background-color: white;
+    margin: 1px;
+}

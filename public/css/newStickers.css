@@ -1,0 +1,194 @@
+.registerMode{
+    width: 99%;
+    right: 0;
+    z-index: 5;
+    background-color: rgb(233, 233, 233);
+    height: 100%;
+}
+
+.flexMode{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 5vh 5vw;
+    height: fit-content;
+    z-index: 2;
+}
+
+.hiddenContents{
+    position: relative;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.registerTitle{
+    margin: 0 5vw;
+}
+
+#searchContainer{
+    text-align: center;
+}
+
+#searchBTN{
+    border-radius: 7%;
+    border: 2px solid gray;
+    background-color: rgb(238, 253, 246);
+}
+
+#datalist{
+    position: relative;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.dataInfo{
+    position: relative;
+    width: 90px;
+    height: 100px;
+    margin: 3px;
+    opacity: 0.85;
+    background-color: ivory;
+}
+
+.serchlist{
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.selected{
+    background-color: rgb(193, 228, 240);
+    border:2px black solid;
+    border-radius: 5%;
+    opacity: 1;
+}
+
+.code{
+    font-size: 1px;
+    position:absolute;
+    top:0;
+    left:0;
+    width:2vw;
+    height:1.5vw;
+    background-color: cadetblue;
+    opacity: 0.4;
+    border: solid 0.1px black;
+}
+
+.name{
+    font-size: 1px;
+    position: absolute;
+    top: 0.5px;
+    left: 0;
+    max-width: 89px;
+    text-align: right;
+    z-index: 2;
+}
+
+.number{
+    position: absolute;
+    bottom: -1px;
+    max-width: 90px;
+    font-size: 5px;
+    text-align: right;
+    z-index: 2;
+    left: 2px;
+}
+
+.gazou{
+    position: relative;
+    height: 100%;
+    border: solid 1.5px gray;
+    border-radius: 5%;
+    margin-right: 0.1vw;
+    z-index: 1;
+}
+
+#addBTN{
+    position: absolute;
+    top:-40px;
+    border-radius: 7%;
+    border: 2px solid gray;
+    background-color: rgb(238, 250, 253);
+}
+
+input[type="submit"]{
+    margin:5%;
+    border-radius: 5%;
+}
+
+.openCheckbox{
+    position: absolute;
+    z-index: 2;
+    border-radius: 5%;
+    background-color: rgb(224, 236, 238);
+    right:5vw;
+    top:2vh;
+
+}
+
+.on{
+    background-color:white;
+}
+
+.deleteContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: gray;
+    visibility: visible;
+}
+
+.selectedToD{
+    background-color: rgb(250, 247, 229);
+    border:2px black solid;
+    border-radius: 2%;
+}
+
+.hidden{
+    visibility: hidden;
+    z-index: -1;
+}
+
+#delete{
+    position: absolute;
+    top:5vh;
+    left:49vw;
+}
+
+#coverNewModal{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+}
+
+.nocover{
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.NewModalCover{
+    z-index: 1;
+    opacity: 0.3;
+    visibility: visible;
+}
+
+.finishBTN{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    margin: auto;
+}
