@@ -86,14 +86,18 @@ function touchMove(event){
         console.log(TouchedItem);
 
         //getElemenrFromNowPointで拾った要素が、各モーダル内の要素ならそのモーダルを開く
-        if( !TouchedItem.classList.contains('Row') && (TouchedItem.id == "newStickers" || TouchedItem.id == "newzone" || TouchedItem.parentNode.classList.contains('new')) ){
-            $newModal.style.zIndex = "2" ;
-            $newModal.style.width = "50%";
-            $forReplaceModal.style.removeProperty("z-index");
-        }else if( !TouchedItem.classList.contains('Row') && (TouchedItem.id == "forReplace" || TouchedItem.id == "subzone" || TouchedItem.parentNode.classList.contains('sub')) ){
-            $forReplaceModal.style.zIndex = "2" ;
-            $forReplaceModal.style.height = "30%";
-            $newModal.style.removeProperty("z-index");
+        if(( !TouchedItem.classList.contains('Row') || !TouchedItem.classList.contains('main') ) && (TouchedItem.id == "newStickers" || TouchedItem.id == "newzone" || TouchedItem.parentNode.classList.contains('new')) ){
+            setTimeout(()=>{
+                $newModal.style.zIndex = "2" ;
+                $newModal.style.width = "50%";
+                $forReplaceModal.style.removeProperty("z-index");
+            },100);
+        }else if(( !TouchedItem.classList.contains('Row') || !TouchedItem.classList.contains('main') ) && (TouchedItem.id == "forReplace" || TouchedItem.id == "subzone" || TouchedItem.parentNode.classList.contains('sub')) ){
+            setTimeout(()=>{
+                $forReplaceModal.style.zIndex = "2" ;
+                $forReplaceModal.style.height = "30%";
+                $newModal.style.removeProperty("z-index");
+            },100);
         }else if( TouchedItem.id !== elementTarget.id){
             $newModal.style.removeProperty("z-index");
             $newModal.style.removeProperty("width");
@@ -275,6 +279,8 @@ function touchEnd(event){
 
     $newModal.style.removeProperty("width");
     $forReplaceModal.style.removeProperty('height');
+    $newModal.style.removeProperty("z-index");
+    $forReplaceModal.style.removeProperty("z-index");
     console.log(2222222222222222222222);
 }
 

@@ -6,68 +6,69 @@ Auth::routes();
 
 
 Route::group(['middleware'=>'auth'],function(){
-    Route::get('/',function () {
+    /*Route::get('/',function () {
         return view('welcome');
-    });
-    Route::get('/orderandreplace/{shop}','App\Http\Controllers\sample@showWall');
+    });*/
+    Route::get('/','App\Http\Controllers\ORController@index');
+    Route::get('/orderandreplace/{shop}','App\Http\Controllers\ORController@showWall');
 });
 
-Route::get('/newWall','App\Http\Controllers\sample@newWall');
+Route::get('/newWall','App\Http\Controllers\ORController@newWall');
 
-Route::post('/createNewWall','App\Http\Controllers\sample@createNewWall');
+Route::post('/createNewWall','App\Http\Controllers\ORController@createNewWall');
 
-Route::post('/sample','App\Http\Controllers\sample@sample');
+Route::post('/sample','App\Http\Controllers\ORController@sample');
 
 
-Route::get('/readData/{numbers}','App\Http\Controllers\sample@getStickerInfo');
+Route::get('/readData/{numbers}','App\Http\Controllers\ORController@getStickerInfo');
 
-Route::get('/modalOpen/{number}','App\Http\Controllers\sample@modalOpen');
+Route::get('/modalOpen/{number}','App\Http\Controllers\ORController@modalOpen');
 
-Route::get('/shop/{shop}/{wallNum}','App\Http\Controllers\sample@giveData');
+Route::get('/shop/{shop}/{wallNum}','App\Http\Controllers\ORController@giveData');
 
-Route::get('/replace/{shop}/{wall}/{X}/{Y}/{codes}/{ncodes}','App\Http\Controllers\sample@replace');
+Route::get('/replace/{shop}/{wall}/{X}/{Y}/{codes}/{ncodes}','App\Http\Controllers\ORController@replace');
 
-Route::get('/Layout/{shop}/{wall}','App\Http\Controllers\sample@Layout');
+Route::get('/Layout/{shop}/{wall}','App\Http\Controllers\ORController@Layout');
 
-Route::post('/saveLayout/{shop}/{wall}/{rowLength}/{bottomLength}/{topNew}/{bottomNew}/{leftNew}/{rightNew}/{topDel}/{bottomDel}/{leftDel}/{rightDel}','App\Http\Controllers\sample@changeLayout');
+Route::post('/saveLayout/{shop}/{wall}/{rowLength}/{bottomLength}/{topNew}/{bottomNew}/{leftNew}/{rightNew}/{topDel}/{bottomDel}/{leftDel}/{rightDel}','App\Http\Controllers\ORController@changeLayout');
 
-Route::get('/newStickers/{shop}','App\Http\Controllers\sample@newStickers');
+Route::get('/newStickers/{shop}','App\Http\Controllers\ORController@newStickers');
 
-Route::get('/registerPage','App\Http\Controllers\sample@registerPage');
+Route::get('/registerPage','App\Http\Controllers\ORController@registerPage');
 
-Route::post('/upload','App\Http\Controllers\sample@upload');
+Route::post('/upload','App\Http\Controllers\ORController@upload');
 
-Route::post('/delete','App\Http\Controllers\sample@delete');
+Route::post('/delete','App\Http\Controllers\ORController@delete');
 
-Route::get('/order/{sheetNum}/{pCode}/{quantity}','App\Http\Controllers\sample@order');
+Route::get('/order/{sheetNum}/{pCode}/{quantity}','App\Http\Controllers\ORController@order');
 
-Route::get('/saveTemporary/{shop}/{wall}/{X}/{Y}/{codes}/{ncodes}/{scodes}','App\Http\Controllers\sample@saveTemporary');
+Route::get('/saveTemporary/{shop}/{wall}/{X}/{Y}/{codes}/{ncodes}/{scodes}','App\Http\Controllers\ORController@saveTemporary');
 
-Route::get('/readTemporary/{shop}/{wall}','App\Http\Controllers\sample@readTemporary');
+Route::get('/readTemporary/{shop}/{wall}','App\Http\Controllers\ORController@readTemporary');
 
-Route::get('/search/{word}','App\Http\Controllers\sample@serch');
+Route::get('/search/{word}','App\Http\Controllers\ORController@serch');
 
-Route::get('/addNewStickers/{shop}/{codes}/{numbers}','App\Http\Controllers\sample@addNewStickers');
+Route::get('/addNewStickers/{shop}/{codes}/{numbers}','App\Http\Controllers\ORController@addNewStickers');
 
-Route::get('/deleteNewStickers/{shop}/{YtoD}/{YtoS}','App\Http\Controllers\sample@deleteNewStickers');
+Route::get('/deleteNewStickers/{shop}/{YtoD}/{YtoS}','App\Http\Controllers\ORController@deleteNewStickers');
 
 Route::get('/calendar',function(){return view('calendar');});
 
-Route::get('/createSheet/{shop}/{date}/{method}/{source}/{comment}','App\Http\Controllers\sample@createSheet');
+Route::get('/createSheet/{shop}/{date}/{method}/{source}/{comment}','App\Http\Controllers\ORController@createSheet');
 
-Route::get('/showSheetList/{shop}','App\Http\Controllers\sample@showSheetList');
+Route::get('/showSheetList/{shop}','App\Http\Controllers\ORController@showSheetList');
 
-Route::get('/selectSheet/{code}','App\HTTP\Controllers\sample@selectSheet');
+Route::get('/selectSheet/{code}','App\HTTP\Controllers\ORController@selectSheet');
 
-Route::get('/moveWall/{shop}/{wall}','App\HTTP\Controllers\sample@moveWall');
+Route::get('/moveWall/{shop}/{wall}','App\HTTP\Controllers\ORController@moveWall');
 
-Route::get('getStickerRanking/{startDate}/{endDate}','App\HTTP\Controllers\sample@getStickerRanking');
+Route::get('getStickerRanking/{startDate}/{endDate}','App\HTTP\Controllers\ORController@getStickerRanking');
 
 
 Route::get('/changesizesheet','App\Http\Controllers\customerNotes@index');
 
 
-Route::post('/test_post','App\Http\Controllers\sample@test_post');
+Route::post('/test_post','App\Http\Controllers\ORController@test_post');
 
 
 

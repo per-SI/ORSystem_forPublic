@@ -62,6 +62,7 @@
         </div>
 
     </div>
+
     @include('rankModal')
 
     <div id="display">
@@ -134,6 +135,7 @@
     </div>
 
     <a id="goToChangeLayout">レイアウト変更</a>
+    <a href="/">shop選択に戻る</a>
 
     <div id="newStickers" class="newStickers">
         <div id="registerTitle" class="registerTitle newContents hiddenContents">
@@ -199,10 +201,10 @@
 
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script type="text/javascript" src="{{asset("js/sample_onload.js")}}" ></script>
+    <script type="text/javascript" src="{{asset("js/onload.js")}}" ></script>
     <script type="text/javascript" src="{{asset("js/makeXYdata.js")}}" ></script>
     <script type="text/javascript" src="{{asset("js/DnD.js")}}"></script>
-    <script type="text/javascript" src="{{asset("js/sample.js")}}"></script>
+    <script type="text/javascript" src="{{asset("js/tab.js")}}"></script>
     <script type="text/javascript" src="{{asset("js/touch.js")}}"></script>
     <script type="text/javascript" src="{{asset("js/order.js")}}"></script>
     <script type="text/javascript" src="{{asset("js/temporary.js")}}"></script>

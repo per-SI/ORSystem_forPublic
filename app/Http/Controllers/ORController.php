@@ -11,8 +11,16 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 
-class sample extends Controller{
+class ORController extends Controller{
 
+    public function index(){
+        $shoplist = DB::select("SELECT shop FROM shoplist ;");
+        $shopList = array();
+        foreach($shoplist as $shop){
+            $shopList[] = (array)$shop ;
+        }
+        return view('index',compact("shopList"));
+    }
 
     public function newWall(){
         $shoplist = DB::select("SELECT shop FROM shoplist ;");
@@ -31,7 +39,7 @@ class sample extends Controller{
             $shop = $request->input('shopName');
             Schema::create($shop.'_items',function(Blueprint $table){
                 $table->integer('code');
-                $table->text('wall');
+                $table->string('wall',50);
                 $table->integer('y');
                 $table->integer('x');
                 $table->unique(['wall','y','x']);
@@ -54,7 +62,7 @@ class sample extends Controller{
         DB::insert($statement);
 
         $query = DB::getQueryLog();
-        return $this->showWall($shop,$wall);
+        return $this->showWall($shop);
     }
 
     public function sample(Request $request){
@@ -632,16 +640,22 @@ class sample extends Controller{
     }
 
     function showSheetList($shop){
-        $query = "SELECT code,CAST(date AS DATE) AS 'date',order_shop,delivery_date,delivery_method,note FROM order_sheet WHERE order_shop=2 ORDER BY code DESC LIMIT 50;";
+        $query = "SELECT id FROM shoplist WEHER shop='".$shop."';";
+        $shopID = DB::select($query);
+        $query = "SELECT code,CAST(date AS DATE) AS 'date',order_shop,delivery_date,delivery_method,note FROM order_sheet WHERE order_shop=".$shopID." ORDER BY code DESC LIMIT 50;";
         $sheetsInfo = DB::select($query);
         echo json_encode($sheetsInfo);
     }
 
-    function createSheet($shop,$date,$method,$source,$comment){
+    function createSheet(Request $request, $shop,$date,$method,$source,$comment){
         if(!$comment == "nocomment"){
             $comment = urldecode($comment);
+        }else{
+            $comment = "コメントなし";
         }
-        $query = "INSERT INTO order_sheet(date, order_staff, order_shop, delivery_method, delivery_date, note) VALUE(NOW(), 1, 2, '".$method."', '".$date."', '".$comment."');";
+        $query = "SELECT id FROM shoplist WEHER shop='".$shop."';";
+        $shopID = DB::select($query);
+        $query = "INSERT INTO order_sheet(date, order_staff, order_shop, delivery_method, delivery_date, note) VALUE(NOW(), ".$request->user()->id.", ".$shopID.", '".$method."', '".$date."', '".$comment."');";
         DB::insert($query);
         $query = "SELECT max(code) AS 'code' FROM order_sheet ;";
         $code = DB::select($query);
@@ -676,13 +690,13 @@ class sample extends Controller{
 
         //SELECT number,sort,sum(quantity),DENSE_RANK() OVER(ORDER BY sum(quantity) DESC)FROM order_items LEFT JOIN order_sheet ON order_sheet.code = code_sales RIGHT JOIN items ON items.code = code_product WHERE date>"2020-12-27" AND date<"2021-01-10 00:33:00" GROUP BY number ORDER BY sum(quantity);
 
-        $query="SELECT number,sum(quantity),DENSE_RANK() OVER(ORDER BY sum(quantity) DESC) AS rank FROM order_items LEFT JOIN order_sheet ON order_sheet.code = code_sales RIGHT JOIN items ON items.code = code_product WHERE date>'".$startDate."' AND date<'".$endDate."' GROUP BY number ORDER BY sum(quantity);";
+        $query="SELECT number,sum(quantity),DENSE_RANK() OVER(ORDER BY sum(quantity) DESC) AS rank FROM order_items LEFT JOIN order_sheet ON order_sheet.code = code_sales RIGHT JOIN items ON items.code = code_product WHERE date > '".$startDate."' AND date < '".$endDate."' GROUP BY number ORDER BY sum(quantity);";
         $rankData = DB::select($query);
         echo json_encode($rankData);
     }
 
     public function test_post(Request $request){
-        $arr = [$request->id, $request->name];
+        $arr = [$request->user(), $request->name,$request->user()->name,$request->cookie()];
         echo json_encode($arr);
     }
 }
