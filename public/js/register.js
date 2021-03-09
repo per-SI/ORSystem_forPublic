@@ -37,6 +37,7 @@ function preview(obj){
         let $rName = document.getElementsByClassName('registerName');
         let $rNumber = document.getElementsByClassName('registerNumber');
         let $rGazou = document.getElementsByClassName('registerGazou');
+        let $rSort = document.getElementsByClassName('registerSort');
         let $decide = document.getElementById('decide');
 
         for( let i=0; i<$pName.length; i++ ){
@@ -57,8 +58,10 @@ function preview(obj){
         for( let i=0; i<obj.files.length; i++ ){
             if(obj.files[i].name.length == 13){
                 $rNumber[i].value = obj.files[i].name.slice(0,-6);
+                $rSort[i].value = obj.files[i].name.slice(-5,-4);
             }else{
                 $rNumber[i].value = obj.files[i].name.slice(0,-4);
+                $rSort[i].value = 1
             }
         }
         for( let i=0; i<obj.files.length; i++ ){

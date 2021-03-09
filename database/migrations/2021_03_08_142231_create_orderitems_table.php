@@ -19,7 +19,7 @@ class CreateOrderitemsTable extends Migration
             $table->integer('code_sales');
             $table->integer('code_product');
             $table->integer('quantity');
-            $table->primary(['code_sales', 'code_product']);
+            $table->unique(['code_sales', 'code_product']);
         });
     }
 
@@ -30,6 +30,6 @@ class CreateOrderitemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('orderitems');
+        Schema::dropIfExists('order_items');
     }
 }

@@ -513,8 +513,9 @@ class ORController extends Controller{
             $name[] = $data[$i]->name;
             $number[] = $data[$i]->number;
             $gazou[] = $data[$i]->gazou;
+            $sort[] = $data[$i]->sort;
         }
-        return view('register',compact('code','name','number','gazou'));
+        return view('register',compact('code','name','number','gazou','sort'));
     }
 
     public function upload(Request $request){
@@ -526,8 +527,6 @@ class ORController extends Controller{
         for( $i=0; $i<count($uploadfiles); $i++ ){
 
             DB::insert('INSERT INTO items(number,name,gazou) VALUE(:number,:name,:gazou);',['number'=>$uploadNumbers[$i],'name'=>$uploadNames[$i],'gazou'=>$uploadGazous[$i]]);
-
-
 
             Storage::putFileAs('public/img/',$uploadfiles[$i],$uploadGazous[$i]);
 

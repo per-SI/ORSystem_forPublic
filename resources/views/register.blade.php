@@ -28,6 +28,7 @@
                 <input class="registerName" type="hidden" name="stickerName[]" value="">
                 <input class="registerNumber" type="hidden" name="stickerNumber[]" value="">
                 <input class="registerGazou" type="hidden" name="stickerGazou[]" value="">
+                <input class="registerSort" type="hidden" name="stickerSort[]" value="">
                 @endfor
                 <div class="accept-wrapper">
                     イメージを選択<br>or<br>イメージをここにドラッグ
