@@ -507,6 +507,7 @@ class ORController extends Controller{
         $name = array();
         $number = array();
         $gazou = array();
+        $sort = array();
 
         for( $i=0; $i<count($data); $i++ ){
             $code[] = $data[$i]->code;
