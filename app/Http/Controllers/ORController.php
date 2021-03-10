@@ -523,10 +523,11 @@ class ORController extends Controller{
         $uploadNames = $request->input('stickerName');
         $uploadNumbers = $request->input('stickerNumber');
         $uploadGazous = $request->input('stickerGazou');
+        $uploadSort = $request->input('stickerSort');
 
         for( $i=0; $i<count($uploadfiles); $i++ ){
 
-            DB::insert('INSERT INTO items(number,name,gazou) VALUE(:number,:name,:gazou);',['number'=>$uploadNumbers[$i],'name'=>$uploadNames[$i],'gazou'=>$uploadGazous[$i]]);
+            DB::insert('INSERT INTO items(number,name,gazou,sort) VALUE(:number,:name,:gazou,:sort);',['number'=>$uploadNumbers[$i],'name'=>$uploadNames[$i],'gazou'=>$uploadGazous[$i],'sort'=>$uploadSort[$i]]);
 
             Storage::putFileAs('public/img/',$uploadfiles[$i],$uploadGazous[$i]);
 
@@ -536,33 +537,23 @@ class ORController extends Controller{
 
         $database = DB::select('SELECT * FROM items');
 
-        dd($request->input('stickerName'),$request->file('files'),$database);
+        return $this->registerPage();
     }
 
-    public function delete(Request $request, $shop){
-        $pathOfNew = 'txtForWall/'.$shop.'/newStickers';
-        $itemLen = count(Storage::files($pathOfNew));
-
-        $num = $request->input('deleteNum');
-        for( $i=0; $i<count($num); $i++ ){
-            Storage::delete($pathOfNew.'/item'.$num[$i].'.txt');
-        }
-        $item = array();
-        for( $i=0; $i<$itemLen; $i++ ){
-            $j=$i+1;
-            if(Storage::exists($pathOfNew.'/item'.$j.'.txt')){
-                $item[] = $pathOfNew.'/item'.$j.'.txt';
-                echo $j;
+    public function delete(Request $request){
+        $deleteID = $request->input('deleteID');
+        $j = count($deleteID);
+        $query = "DELETE FROM items WHERE code in(";
+        for($i=0; $i<$j; ++$i){
+            if($deleteID[$i]){
+                $query .= "$deleteID[$i],";
             }
         }
-        for( $i=0; $i<count($item); $i++ ){
-            $j=$i+1;
-            if( $item[$i] !== $pathOfNew.'/item'.$j.'.txt' ){
-                Storage::move($item[$i], $pathOfNew.'/item'.$j.'.txt');
-            }
-        }
+        $query = mb_substr($query,0,-1);
+        $query .= ");";
+        DB::delete($query);
 
-        dd($request->input('deleteNum'),$num);
+        return $this->registerPage();
     }
 
     public function modalOpen($number){

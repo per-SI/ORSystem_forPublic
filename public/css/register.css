@@ -162,15 +162,9 @@ input[type="submit"]{
     z-index: -1;
 }
 
-input[type="checkbox"]{
-    position: absolute;
-    width:20px;
-    height: 20px;
-}
-
 #delete{
     position: absolute;
-    top:10vh;
+    top:7vh;
     left:49vw;
 }
 
@@ -180,7 +174,7 @@ input[type="checkbox"]{
     left:0;
     width: 100vw;
     height: 100vh;
-    background-color: gray;
+    background-color: rgb(195, 194, 194);
 }
 
 .nocover{
@@ -189,8 +183,15 @@ input[type="checkbox"]{
     visibility: hidden;
 }
 
-.cover{
+.NewModalCover{
     z-index: 1;
-    opacity: 0.3;
+    opacity: 0.2;
     visibility: visible;
+}
+
+.selectedToD{
+    background-color: rgb(202, 250, 240);
+    opacity: 0.4;
+    border:2px black solid;
+    border-radius: 2%;
 }

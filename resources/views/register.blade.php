@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>デザイン登録</h1>
-    <button id="openCheckbox" class="openCheckbox" onclick="showCheckbox(event)">ステッカー削除</button>
+    <button id="openCheckbox" class="openCheckbox">ステッカー削除</button>
 
     <div id="datalist">
         @for( $i=0; $i<count($gazou); $i++ )
@@ -46,7 +46,7 @@
         <form action="/delete" method="POST">
             @csrf
             @for( $i=0; $i<count($gazou); $i++ )
-            <input type="checkbox" class="checkbox" name="deleteNum[]" value="{{$i+1}}" onchange="check(this)">
+            <input type="hidden" class="deleteID" name="deleteID[]" value="">
             @endfor
             <input id="delete" type="submit" value="削除" disabled="true">
         </form>
@@ -57,7 +57,7 @@
 
 
     <script type="text/javascript" src="{{asset('js/register.js')}}" ></script>
-    <script type="text/javascript" src="{{asset('js/deleteNewStickers.js')}}" ></script>
+    <script type="text/javascript" src="{{asset('js/deleteDesigns.js')}}" ></script>
 
 </body>
 </html>
