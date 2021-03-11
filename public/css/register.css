@@ -1,3 +1,23 @@
+#head{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#head>:first-child{
+    margin-right:auto;
+    color: lightslategray;
+}
+
+#head>:last-child{
+    text-decoration: none;
+    border: 1px solid lightslategray;
+    color: slategrey;
+    border-bottom-width: initial;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+
 #datalist{
     display:flex;
     flex-direction: row;

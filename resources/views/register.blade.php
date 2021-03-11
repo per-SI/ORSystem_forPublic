@@ -7,7 +7,10 @@
     <title>itemsに登録</title>
 </head>
 <body>
-    <h1>デザイン登録</h1>
+    <div id="head">
+        <h1>デザイン登録</h1>
+        <a class="topLink" href="/">トップページへ戻る</a>
+    </div>
     <button id="openCheckbox" class="openCheckbox">ステッカー削除</button>
 
     <div id="datalist">

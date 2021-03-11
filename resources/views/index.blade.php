@@ -14,7 +14,6 @@
         <div class="position-absolute" style="top: 5vh; left:4vw;">
             <h2 class="fw-bold" style="color:#c79605; font-size:xx-large; font-weight:">Order <span style="color:rgb(120, 119, 119)">&</span> Replace</h2>
         </div>
-        <div class="position-absolute top-40 start-50 translate-middle" ><p>SHOPを選択してください</p></div>
         <div style="max-height: 40vh; background-color: white;" class="container position-absolute top-50 start-50 translate-middle border border-5 overflow-auto mh-50">
             <div class="row row-cols-2">
             @foreach($shopList as $shop)
@@ -24,7 +23,11 @@
           </div>
 
         <div class="position-absolute shadow-sm bg-body rounded start-50 translate-middle" style="top:30vh; font-size:small;">
-          <a href="/newWall" class="border border-1 text-decoration-none" style=" color:#4d7395">新しいSHOP&ラックを作成</a>
+            <a href="/newWall" class="border border-1 text-decoration-none" style=" color:#4d7395; background-color:;">新しいSHOP&ラックを作成</a>
+        </div>
+
+        <div class="position-absolute shadow-sm bg-body rounded start-50 translate-middle" style="bottom:15vh; border: 1px solid black;">
+            <a href="/registerPage" class="border border-1 text-decoration-none" style=" color:#4d7395">Item登録</a>
         </div>
 
         <form class="position-absolute shadow-sm bg-body rounded" id="logout-form" action="{{ route('logout') }}" method="POST" style="top: 1vh; right: 7vw;position: absolute; font-size:small;">
