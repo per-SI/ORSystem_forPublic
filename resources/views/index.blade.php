@@ -14,7 +14,7 @@
         <div class="position-absolute" style="top: 5vh; left:4vw;">
             <h2 class="fw-bold" style="color:#c79605; font-size:xx-large; font-weight:">Order <span style="color:rgb(120, 119, 119)">&</span> Replace</h2>
         </div>
-        <div style="max-height: 40vh; background-color: white;" class="container position-absolute top-50 start-50 translate-middle border border-5 overflow-auto mh-50">
+        <div style="max-height: 40vh; max-width: fit-content; background-color: white;" class="container position-absolute top-50 start-50 translate-middle border border-5 overflow-auto mh-50">
             <div class="row row-cols-2">
             @foreach($shopList as $shop)
               <div style="text-align:center;" class="col border border-2"><a class="text-decoration-none" style="color:#749abc;" href="/orderandreplace/{{$shop["shop"]}}">{{$shop["shop"]}}</a></div>
