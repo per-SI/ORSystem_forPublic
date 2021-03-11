@@ -1,3 +1,9 @@
+body{
+    background-color: rgba(220,220,220,0.77);
+    background-image: url(../background_img1.png);
+    background-blend-mode: screen;
+}
+
 #selectForm{
     display: flex;
     flex-wrap: wrap;

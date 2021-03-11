@@ -10,14 +10,14 @@
 </head>
 <body>
 
-    <div class="position-relative vw-100 vh-100" style="background-color:#f7f8fa;">
+    <div class="position-relative vw-100 vh-100" style="background-image: url('{{asset('background_img1.png')}}'); background-color: rgba(247,248,250,0.65); background-blend-mode:hue;">
         <div class="position-absolute" style="top: 5vh; left:4vw;">
             <h2 class="fw-bold" style="color:#c79605; font-size:xx-large; font-weight:">Order <span style="color:rgb(120, 119, 119)">&</span> Replace</h2>
         </div>
-        <div style="max-height: 40vh; max-width: fit-content; background-color: white;" class="container position-absolute top-50 start-50 translate-middle border border-5 overflow-auto mh-50">
+        <div style="max-height: 40vh; max-width: fit-content; background-color: white; border: 5px solid #8e9fb0!important;" class="container position-absolute top-50 start-50 translate-middle border-5 overflow-auto mh-50">
             <div class="row row-cols-2">
             @foreach($shopList as $shop)
-              <div style="text-align:center;" class="col border border-2"><a class="text-decoration-none" style="color:#749abc;" href="/orderandreplace/{{$shop["shop"]}}">{{$shop["shop"]}}</a></div>
+              <div style="text-align:center;  border: 1px solid #6e7e9d!important;" class="col border-2"><a class="text-decoration-none" style="color:#283593;" href="/orderandreplace/{{$shop["shop"]}}">{{$shop["shop"]}}</a></div>
             @endforeach
             </div>
           </div>

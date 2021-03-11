@@ -23,12 +23,12 @@ for(let i=0;i<$tab.length;i++){
             }
             $newModal.classList.remove("show");
             $forReplaceModal.classList.remove("show2");
-            $display.style.removeProperty('margin-left');
+            //$display.style.removeProperty('margin-left');
             $display.style.removeProperty('padding-top');
             $display.style.removeProperty('padding-left');
             $display.style.removeProperty('padding-right');
             $display.style.removeProperty('padding-bottom');
-            $display.style.removeProperty('margin-bottom');
+            //$display.style.removeProperty('margin-bottom');
             $RFC.classList.remove('RorOactive');
             $OSC.classList.add('RorOactive');
             $addnewBTN.classList.remove('showANBTN');
@@ -44,13 +44,13 @@ for(let i=0;i<$tab.length;i++){
             }
             $newModal.classList.add("show");
             $forReplaceModal.classList.add("show2");
-            $display.style.marginLeft = "0" ;
-            $display.style.paddingTop = "3%" ;
-            $display.style.paddingLeft = "3%" ;
-            $display.style.paddingRight = "3%" ;
-            $display.style.paddingBottom = "3%" ;
-            $display.style.marginBottom = "25%" ;
-            $display.style.marginRight = "20%" ;
+            //$display.style.marginLeft = "0" ;
+            $display.style.paddingTop = "2%" ;
+            $display.style.paddingLeft = "2%" ;
+            $display.style.paddingRight = "2%" ;
+            $display.style.paddingBottom = "2%" ;
+            //$display.style.marginBottom = "25%" ;
+            //$display.style.marginRight = "20%" ;
             $RFC.classList.add('RorOactive');
             $OSC.classList.remove('RorOactive');
             $addnewBTN.classList.add('showANBTN');
