@@ -1,9 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+/*
+Route::get('/', function(){
+    return view('app');
+})->where('any', '.*');*/
 
 Auth::routes();
-
 
 Route::group(['middleware'=>'auth'],function(){
     /*Route::get('/',function () {
@@ -11,6 +14,10 @@ Route::group(['middleware'=>'auth'],function(){
     });*/
     Route::get('/','App\Http\Controllers\ORController@index');
     Route::get('/orderandreplace/{shop}','App\Http\Controllers\ORController@showWall');
+});
+
+Route::get('/top',function(){
+    return view('app');
 });
 
 Route::get('/newWall','App\Http\Controllers\ORController@newWall');
