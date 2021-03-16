@@ -71,13 +71,13 @@
 }
 
 .top-message2{
-    transform: translate3d(70%,800%,0);
+    transform: translate3d(100%,900%,0);
     font-size: 25px;
     color: #8e8e8e;
 }
 
 .message-e{
-    color: #efc4ef;
+    color: #ffb8d2;
 }
 
 .message-a{
@@ -85,7 +85,7 @@
 }
 
 .message-nw{
-    color: #4dd0e1;
+    color: #4da4af;
 }
 
 .message-fade-enter{
@@ -115,7 +115,7 @@
 
     .top-message2{
         font-size: 15px;
-        transform: translate3d(10%,200%,0);
+        transform: translate3d(10%,700%,0);
     }
 
     .nav-menu{

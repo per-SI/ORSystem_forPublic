@@ -1,0 +1,13 @@
+.profile-container{
+    display: grid;
+    justify-content: center;
+}
+
+.profile-img{
+    background-image: url(../../img/profile-img/profile-img2.png);
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+}
