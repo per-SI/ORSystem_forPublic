@@ -29,7 +29,7 @@ export default function Skills(){
                 </div>
 
                 <div className="skill-text-wrapper">
-                    <div className=".font-arapey skill-text">　JavaScriptが得意です。発注・レイアウトのシステムを作る上での要でしたが、独学かつ初心者であったため、非効率ではありましたが生のJSですべてコーディングした経験があります。<br/>　ここ最近はReactを触り始め、このサイトもReactでコーディングしています。Reactはモダンな技術に触れたくて選択しました。<br/>フロントエンドでのこだわりは、PCでもスマホでも見やすく使いやすいようにというのが自分の中では外せない条件だと思っています。ですので、レイアウト等に関してのコーディングもまだまだ勉強中です。</div>
+                    <div className=".font-arapey skill-text">　JavaScriptが得意です。発注・レイアウトのシステムを作る上での要でしたが、独学かつ初心者であったため、非効率ではありましたが生のJSですべてコーディングした経験があります。<br/>　ここ最近はReactを触り始め、このサイトもReactでコーディングしています。Reactはモダンな技術に触れたくて選択しました。<br/>　フロントエンドでは、PCでもスマホでも見やすく使いやすいようにという、ユーザ視点だと思っています。そのため、レイアウト等に関してのコーディングももっと力を入れたいと思っています。</div>
                 </div>
 
             </div>
@@ -44,7 +44,7 @@ export default function Skills(){
                 </div>
 
                 <div className="skill-text-wrapper">
-                    <div className=".font-arapey skill-text">　Laravelを使っての開発が得意です。発注システムでもこのサイトでも、バックエンドに使っています。<br/>　はじめは発注システムをNode.jsで作っていたのですが、会社のシステム開発に合わせてLaravelで作り直しました。Laravelのほうが使用期間も長く、理解が深いのはこちらです。しかし2種類とも使ってみたことで、開発する上でのバックエンドの役割に関しても理解が進んだと思っています。</div>
+                    <div className=".font-arapey skill-text">　Laravelを使っての開発が得意です。発注システムでもこのサイトでも、バックエンドに使っています。<br/>　はじめは発注システムをNode.jsで作っていたのですが、会社のシステム開発に合わせてLaravelで作り直しました。Laravelのほうが使用期間も長く、理解が深いのはこちらです。しかし2種類とも使ってみたことで、開発する上でのバックエンドの役割に関しても、理解が進んだと思っています。</div>
                 </div>
 
             </div>
