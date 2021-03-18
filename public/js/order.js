@@ -52,7 +52,7 @@ function openModal(event){
             try{
                 let sheetNum = document.getElementById('sheetNum').textContent;
                 $cover.setAttribute('onclick','');
-                const res = await axios.get('/order/'+sheetNum+"/"+$selecter[i].getAttribute('code')+'/'+$selecter[i].value);
+                const res = await axios.get('/orderandreplace/order/'+sheetNum+"/"+$selecter[i].getAttribute('code')+'/'+$selecter[i].value);
                 console.log(res.data)
                 let setTargetStickers = document.getElementsByName(event.target.getAttribute('number'));
                 let h = setTargetStickers.length;

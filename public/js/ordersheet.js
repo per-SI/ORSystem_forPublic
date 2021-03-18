@@ -13,7 +13,7 @@ function openModal2(event){
         async function getSheetList(){
             try{
 
-                const res = await axios.get('/showSheetList/'+$shop);
+                const res = await axios.get('/orderandreplace/showSheetList/'+$shop);
                 console.log(res.data,new Date(res.data[0].date).getFullYear());
 
                 let j= res.data.length;
@@ -79,7 +79,7 @@ async function createSheet(){
             Dcomment = "nocomment"
         }
         Dcomment = encodeURI(Dcomment);
-        const res = await axios.get('/createSheet/'+$shop+'/'+Ddate+"/"+Dmethod+"/"+Dsource+"/"+Dcomment);
+        const res = await axios.get('/orderandreplace/createSheet/'+$shop+'/'+Ddate+"/"+Dmethod+"/"+Dsource+"/"+Dcomment);
         document.getElementById('deliveryDate').textContent = "カレンダーから選択" ;
         document.getElementById('deliveryMethod').value = "配送";
         document.getElementById('sheetComment').value = "";
@@ -134,7 +134,7 @@ async function selectSheet(event){
     event.stopPropagation();
     try{
         let sheetCode = event.target.parentNode.firstElementChild.textContent;
-        const res = await axios.get('/selectSheet/'+sheetCode);
+        const res = await axios.get('/orderandreplace/selectSheet/'+sheetCode);
 
         console.log(res.data);
         document.getElementById('sheetNum').textContent = sheetCode ;
@@ -161,7 +161,7 @@ async function selectSheet(event){
 async function showSheet(event){
     try{
         let sheetCode = event.currentTarget.firstElementChild.textContent;
-        const res = await axios.get('/selectSheet/'+sheetCode);
+        const res = await axios.get('/orderandreplace/selectSheet/'+sheetCode);
         console.log(res.data);
 
         document.getElementById("orderSheetInfoModal").classList.add("orderSheetInfoModalOpen");

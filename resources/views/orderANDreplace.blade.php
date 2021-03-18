@@ -135,7 +135,7 @@
     </div>
 
     <a id="goToChangeLayout">レイアウト変更</a>
-    <a href="/">shop選択に戻る</a>
+    <a href="/orderandreplace">shop選択に戻る</a>
 
     <div id="newStickers" class="newStickers">
         <div id="registerTitle" class="registerTitle newContents hiddenContents">

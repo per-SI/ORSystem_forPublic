@@ -31,7 +31,7 @@ async function getStickerRanking(){
     try{
         let startDate = document.getElementById("startOfPeriod").textContent;
         let endDate = document.getElementById("endOfPeriod").textContent;
-        const res = await axios.get("/getStickerRanking/"+startDate+"/"+endDate);
+        const res = await axios.get("/orderandreplace/getStickerRanking/"+startDate+"/"+endDate);
         console.log(res.data);
         rankInfo=[];
         let j = res.data.length;

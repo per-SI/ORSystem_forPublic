@@ -7,8 +7,9 @@
     <link type="text/css" rel="stylesheet" href="{{asset("css/changeWall.css")}}">
 </head>
 <body>
-    <h1>Coordinate Wall "{{ $wall }}" in {{$shop}}</h1>
-    <a href="/orderandreplace/{{ $shop }}">Order&Replace</a>
+    <h1>レイアウト変更 </h1>
+    <h4>ショップ：{{$shop}}　ラック：{{ $wall }}</h4>
+    <a href="/ORsystem/{{ $shop }}">発注・入替に戻る</a>
 
 
 
@@ -93,20 +94,42 @@
 
 
 
-    <form id="saveLayout" action="/saveLayout/{{$shop}}/{{$wall}}/{{$rowLength["max(y)"]}}/{{$columnLength[0]["max(x)"]}}" method="POST">
+    <form id="saveLayout" action="/orderandreplace/saveLayout/{{$shop}}/{{$wall}}/{{$rowLength["max(y)"]}}/{{$columnLength[0]["max(x)"]}}" method="POST">
         @csrf
         <input type="hidden" name="Hx" value="" id="hiddenX">
         <input type="hidden" name="Hy" value="" id="hiddenY">
         <input type="hidden" name="Sx" value="" id="spaceX">
         <input type="hidden" name="Sy" value="" id="spaceY">
-        <div>
+        <div class="newWallName">
             面の名前を変更する場合は入力
             <input type="text" placeholder="{{$wall}}" name="wallNewName">面
         </div>
         <input type="submit" value="SAVE">
     </form>
 
+    <form id="deleteWallForm" action="/orderandreplace/deleteWall" method="POST">
+        @csrf
+        ラックを削除する場合はこちら
+        <input type="hidden" name="shop" value="{{$shop}}">
+        <input type="hidden" name="wall" value="{{$wall}}">
+        <div class="deleteAgreementContainer">
+            このラックを削除する場合はチェック
+            <input type="checkbox" id="deleteAgreement" onchange="changeDisabled(event)">
+        </div>
+        <input id="deleteModalBTN" type="button" disabled="true" value="削除する" onclick="openModal()">
+
+        <div id="alertModal" class="alertModal">
+            本当に削除しますか？
+            <input class="yesnoBTN" type="submit" value="削除">
+            <input class="yesnoBTN" type="button" value="やめる" onclick="closeModal()">
+        </div>
+
+        <div id="cover2" class="cover2" onclick="closeModal()"></div>
+
+    </form>
+
 <script type="text/javascript" src="{{asset("js/changeWall.js")}}"></script>
+<script type="text/javascript" src="{{asset("js/deleteWall.js")}}"></script>
 
 </body>
 </html>

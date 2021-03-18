@@ -76,7 +76,7 @@
 
     <div id ="manageXY" >
 
-        <form id="deleteCellForm" action="/deleteCell">
+        <form id="deleteCellForm" action="/orderandreplace/deleteCell">
             <% const arrofColumnLength = [];
                 for(let i=0; i<items.length; i++){
                     arrofColumnLength.push(items[i].length);

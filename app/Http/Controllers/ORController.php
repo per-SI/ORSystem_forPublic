@@ -33,10 +33,11 @@ class ORController extends Controller{
 
     public function createNewWall(Request $request){
         DB::enableQueryLog();
-
         $shop = $request->input("shopSelected");
+        echo $shop;
         if( $shop === "notSelected" ){
             $shop = $request->input('shopName');
+            echo $shop;
             Schema::create($shop.'_items',function(Blueprint $table){
                 $table->integer('code');
                 $table->string('wall',50);
@@ -106,7 +107,7 @@ class ORController extends Controller{
         }
 
         //wallListの取得
-        $query = "SELECT wall FROM ".$shop."_walls";
+        $query = "SELECT DISTINCT wall FROM ".$shop."_items WHERE wall<>'new' AND wall NOT LIKE '%\_t' AND wall NOT LIKE '%\_t\_sub';";
         $walllist = DB::select($query);
         $l = count($walllist);
         $wallList = array();
@@ -386,8 +387,10 @@ class ORController extends Controller{
         //既存のx,yを新しいx,yに更新する
 
         if( $topNew != 0 || $leftNew != 0 ){
-            $URCquery = "UPDATE ".$shop."_items SET y=y+".$topNew.",x=x+".$leftNew." WHERE wall='".$wall."';";
-            DB::update($URCquery);
+            $URCquery1 = "UPDATE ".$shop."_items SET y=y+5000+".$topNew.",x=x+5000+".$leftNew." WHERE wall='".$wall."';";
+            DB::update($URCquery1);
+            $URCquery2 = "UPDATE ".$shop."_items SET y=y-5000,x=x-5000 WHERE wall='".$wall."';";
+            DB::update($URCquery2);
         }
 
         //新行または新列が追加されている場合、挿入する
@@ -495,8 +498,13 @@ class ORController extends Controller{
 
     }
 
-    public function newStickers($shop){
+    public function deleteWall(Request $request){
+        $shop = $request->input('shop');
+        $wall = $request->input('wall');
+        $query = "DELETE FROM ".$shop."_items WHERE wall='".$wall."';";
+        DB::delete($query);
 
+        return $this->showWall($shop);
     }
 
     public function registerPage(){
@@ -622,10 +630,12 @@ class ORController extends Controller{
                 $query .= " WHEN y=".$YtoS[$i]." THEN ".$h ;
             }
             $query .= " ELSE y END WHERE wall='new';";
-        }else{
+            DB::update($query);
+        }else if($YtoS != "0"){
             $query = "UPDATE ".$shop."_items SET y=1 WHERE wall='new' ;";
+            DB::update($query);
         }
-        DB::update($query);
+
 
         echo "UpdateNewStickers";
     }

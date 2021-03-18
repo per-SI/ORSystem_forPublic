@@ -1,7 +1,7 @@
 async function replace(){
     try{
         if(codes.length){
-            const res = await axios.get("/replace/"+$shop+"/"+$wall+"/"+X+"/"+Y+"/"+codes+"/"+ncodes);
+            const res = await axios.get("/orderandreplace/replace/"+$shop+"/"+$wall+"/"+X+"/"+Y+"/"+codes+"/"+ncodes);
             setImgAttributes("main");
             setImgAttributes("new");
             $subZone.innerHTML = "" ;
@@ -32,7 +32,7 @@ function setImgAttributes(target){
 
 async function saveTemporary(){
     try{
-        const res = await axios.get("/saveTemporary/"+$shop+"/"+$wall+"/"+X+"/"+Y+"/"+codes+"/"+ncodes+"/"+scodes);
+        const res = await axios.get("/orderandreplace/saveTemporary/"+$shop+"/"+$wall+"/"+X+"/"+Y+"/"+codes+"/"+ncodes+"/"+scodes);
         console.log(res.data);
     }catch(error){
         console.log(error);
@@ -41,7 +41,7 @@ async function saveTemporary(){
 
 async function readTemporary(){
     try{
-        const res = await axios.get("/readTemporary/"+$shop+"/"+$wall);
+        const res = await axios.get("/orderandreplace/readTemporary/"+$shop+"/"+$wall);
         console.log(res.data);
         $mainZone.textContent = "" ;
         $subZone.textContent = "" ;

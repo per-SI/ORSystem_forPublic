@@ -119,7 +119,7 @@ class otherRowColumn{
 async function setWall(event){
     try{
         let targetWall = document.getElementById('wall').value;
-        const res = await axios.get('/moveWall/'+$shop+'/'+targetWall);
+        const res = await axios.get('/orderandreplace/moveWall/'+$shop+'/'+targetWall);
         let rowLen = res.data[1].rowLength ;
         let columnLen = res.data[2].columnLength ;
 
@@ -132,7 +132,7 @@ async function setWall(event){
         }
 
         $wall = targetWall;
-        document.getElementById("goToChangeLayout").setAttribute("href","/Layout/"+$shop+"/"+$wall);
+        document.getElementById("goToChangeLayout").setAttribute("href","/orderandreplace/Layout/"+$shop+"/"+$wall);
 
     }catch(error){
         console.log(error);
@@ -163,7 +163,7 @@ async function getStickerData(){
     }
     numbers = numbers.slice(0,-1);
     try{
-        const res = await axios.get('/readData/'+numbers);
+        const res = await axios.get('/orderandreplace/readData/'+numbers);
         console.log(res.data);
         setStickerData(res.data);
     }catch(error){

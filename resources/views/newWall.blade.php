@@ -12,7 +12,7 @@
 
     <div id="selectContainer">
 
-        <form id="selectForm" action="/createNewWall" method="POST">
+        <form id="selectForm" action="/orderandreplace/createNewWall" method="POST">
             @csrf
             <div id="nameANDname">
                 <div class="shopNameContainer" style="margin-left:48px;">

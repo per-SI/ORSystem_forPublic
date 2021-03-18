@@ -29,7 +29,7 @@ document.getElementById('searchBTN').addEventListener('click',async()=>{
     let $word = document.getElementById('word').value ;
     try{
         console.log($word);
-        const res = await axios.get('/search/'+$word);
+        const res = await axios.get('/orderandreplace/search/'+$word);
         let code = [];
         let name = [];
         let number = [];
@@ -128,7 +128,7 @@ async function addNewStickers(event){
         selectedNumbers.push("'"+$selected[i].children[0].textContent+"'");
     }
     try{
-        const res = await axios.get('/addNewStickers/'+$shop+'/'+codes+'/'+selectedNumbers);
+        const res = await axios.get('/orderandreplace/addNewStickers/'+$shop+'/'+codes+'/'+selectedNumbers);
 
         $newParent = document.getElementsByClassName('new');
         let h = $newParent.length ;

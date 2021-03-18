@@ -17,17 +17,17 @@
         <div style="max-height: 40vh; max-width: fit-content; background-color: white; border: 5px solid #8e9fb0!important;" class="container position-absolute top-50 start-50 translate-middle border-5 overflow-auto mh-50">
             <div class="row row-cols-2">
             @foreach($shopList as $shop)
-              <div style="text-align:center;  border: 1px solid #6e7e9d!important;" class="col border-2"><a class="text-decoration-none" style="color:#283593;" href="/orderandreplace/{{$shop["shop"]}}">{{$shop["shop"]}}</a></div>
+              <div style="text-align:center;  border: 1px solid #6e7e9d!important;" class="col border-2"><a class="text-decoration-none" style="color:#283593;" href="/ORsystem/{{$shop["shop"]}}">{{$shop["shop"]}}</a></div>
             @endforeach
             </div>
           </div>
 
         <div class="position-absolute shadow-sm bg-body rounded start-50 translate-middle" style="top:30vh; font-size:small;">
-            <a href="/newWall" class="border border-1 text-decoration-none" style=" color:#4d7395; background-color:;">新しいSHOP&ラックを作成</a>
+            <a href="/orderandreplace/newWall" class="border border-1 text-decoration-none" style=" color:#4d7395; background-color:;">新しいSHOP&ラックを作成</a>
         </div>
 
         <div class="position-absolute shadow-sm bg-body rounded start-50 translate-middle" style="bottom:15vh; border: 1px solid black;">
-            <a href="/registerPage" class="border border-1 text-decoration-none" style=" color:#4d7395">Item登録</a>
+            <a href="/orderandreplace/registerPage" class="border border-1 text-decoration-none" style=" color:#4d7395">Item登録</a>
         </div>
 
         <form class="position-absolute shadow-sm bg-body rounded" id="logout-form" action="{{ route('logout') }}" method="POST" style="top: 1vh; right: 7vw;position: absolute; font-size:small;">

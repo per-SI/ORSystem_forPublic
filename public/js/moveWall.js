@@ -67,7 +67,7 @@ class mainRowLength{
 async function moveWall(event){
     try{
         let targetWall = document.getElementById('wall').value;
-        const res = await axios.get('/moveWall/'+$shop+'/'+targetWall);
+        const res = await axios.get('/orderandreplace/moveWall/'+$shop+'/'+targetWall);
         let rowLen = res.data[1].rowLength ;
         let columnLen = res.data[2].columnLength ;
 

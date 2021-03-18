@@ -77,8 +77,11 @@ function selectToD(event){
 async function deleteNewStickers(event){
     let codesD = event.target.getAttribute('arr');
     let codesS = event.target.getAttribute('arr2');
+    if(!codesS){
+        codesS = "0" ;
+    }
     try{
-        const res = await axios.get('/deleteNewStickers/'+$shop+'/'+codesD+"/"+codesS);
+        const res = await axios.get('/orderandreplace/deleteNewStickers/'+$shop+'/'+codesD+"/"+codesS);
         if(res.data == "UpdateNewStickers"){
             let $selectedToD = document.getElementsByClassName('selectedToD');
             let j = $selectedToD.length
