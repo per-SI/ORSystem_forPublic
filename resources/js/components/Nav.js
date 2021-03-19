@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { BrowserRouter, Route, Link, Router } from 'react-router-dom';
+import { HashRouter as BrowserRouter, Route, Link, } from 'react-router-dom';
 import {CSSTransition} from 'react-transition-group';
 import Profile from './Profile';
 import Portfolio from './Portfolio';

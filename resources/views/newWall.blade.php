@@ -7,8 +7,10 @@
     <title>Create New Wall</title>
 </head>
 <body>
-
-    <h2>Newラック作成</h2>
+    <div class="header">
+        <h2>Newラック作成</h2>
+        <a href="/orderandreplace">shop選択に戻る</a>
+    </div>
 
     <div id="selectContainer">
 
@@ -62,7 +64,7 @@
 
     <div id="previewContainer">
         <div id="previewInfo">
-            <div><span id="previewShop"></span><span id="previewWall"></span></div>
+            <div class="previewShopWall"><span id="previewShop"></span><span id="previewWall"></span></div>
         </div>
         <div id="previewXY">
             <div class="Y">

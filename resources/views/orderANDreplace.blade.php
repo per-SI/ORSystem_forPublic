@@ -130,19 +130,18 @@
 
     </div>
 
-    <div id="sampleFormContainer">
-        <button onclick="test_post()">クリック</button>
+    <div class="aContainer">
+        <a id="goToChangeLayout">レイアウト変更</a>
+        <a id="backToTop" href="/orderandreplace">shop選択に戻る</a>
     </div>
 
-    <a id="goToChangeLayout">レイアウト変更</a>
-    <a href="/orderandreplace">shop選択に戻る</a>
 
     <div id="newStickers" class="newStickers">
         <div id="registerTitle" class="registerTitle newContents hiddenContents">
-            <h2 >NEWステッカー登録</h2>
+            <h2 >アイテム登録</h2>
         </div>
         <button id="finishBTN" class="finishBTN  newContents hiddenContents" onclick="closeRegisterModal()">配置替えに戻る</button>
-        <button id="openCheckbox" class="openCheckbox newContents hiddenContents" >ステッカー削除</button>
+        <button id="openCheckbox" class="openCheckbox newContents hiddenContents" >アイテム削除</button>
 
         <div id="newzone" class="newzone">
             @for( $i=0; $i<count($new); $i++ )

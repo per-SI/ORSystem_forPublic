@@ -43,7 +43,7 @@
     <div id="contentTitles">
         <div class="sheetinfoT">品番</div>
         <div class="sheetinfoT">名前</div>
-        <div class="sheetinfoT">枚数</div>
+        <div class="sheetinfoT">数量</div>
     </div>
 </div>
 

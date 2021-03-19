@@ -1,3 +1,18 @@
+h2{
+    color: gray;
+}
+
+.header{
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    margin-bottom: 40px;
+}
+
+.header > a{
+    text-decoration: none;
+}
+
 body{
     background-color: rgba(220,220,220,0.77);
     background-image: url(../background_img1.png);
@@ -122,6 +137,7 @@ body{
     min-height: 20vw;
     background-color: rgb(139, 155, 171);
     padding: 10px;
+    margin-top:20px;
 }
 
 .Y{
@@ -138,4 +154,10 @@ body{
     border: solid 1px black;
     background-color: white;
     margin: 1px;
+}
+
+.previewShopWall{
+    display: grid;
+    grid-auto-flow: column;
+    align-items: baseline;
 }

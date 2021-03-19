@@ -25,7 +25,7 @@
     </div>
 
         <div class="upload-container">
-            <form id="uploadForm" action="/upload" method="POST" enctype="multipart/form-data">
+            <form id="uploadForm" action="/orderandreplace/upload" method="POST" enctype="multipart/form-data">
                 @csrf
                 @for( $i=0; $i<20; $i++ )
                 <input class="registerName" type="hidden" name="stickerName[]" value="">

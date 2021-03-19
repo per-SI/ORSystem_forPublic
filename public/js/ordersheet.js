@@ -78,12 +78,16 @@ async function createSheet(){
         if(Dcomment == ""){
             Dcomment = "nocomment"
         }
-        Dcomment = encodeURI(Dcomment);
-        const res = await axios.get('/orderandreplace/createSheet/'+$shop+'/'+Ddate+"/"+Dmethod+"/"+Dsource+"/"+Dcomment);
+        const res = await axios.post("/orderandreplace/createSheet",{
+            shop: $shop,
+            date: Ddate,
+            method: Dmethod,
+            source: Dsource,
+            comment: Dcomment,
+        });
         document.getElementById('deliveryDate').textContent = "カレンダーから選択" ;
         document.getElementById('deliveryMethod').value = "配送";
         document.getElementById('sheetComment').value = "";
-
         let sheetCode = res.data[0].code ;
         document.getElementById('sheetNum').textContent = sheetCode ;
 

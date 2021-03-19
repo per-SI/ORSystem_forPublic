@@ -32,12 +32,9 @@ class ORController extends Controller{
     }
 
     public function createNewWall(Request $request){
-        DB::enableQueryLog();
         $shop = $request->input("shopSelected");
-        echo $shop;
         if( $shop === "notSelected" ){
             $shop = $request->input('shopName');
-            echo $shop;
             Schema::create($shop.'_items',function(Blueprint $table){
                 $table->integer('code');
                 $table->string('wall',50);
@@ -62,7 +59,6 @@ class ORController extends Controller{
         $statement = "INSERT INTO ".$shop."_items"."(code,wall,y,x) VALUE".$insertValue.";" ;
         DB::insert($statement);
 
-        $query = DB::getQueryLog();
         return $this->showWall($shop);
     }
 
@@ -641,22 +637,27 @@ class ORController extends Controller{
     }
 
     function showSheetList($shop){
-        $query = "SELECT id FROM shoplist WEHER shop='".$shop."';";
-        $shopID = DB::select($query);
-        $query = "SELECT code,CAST(date AS DATE) AS 'date',order_shop,delivery_date,delivery_method,note FROM order_sheet WHERE order_shop=".$shopID." ORDER BY code DESC LIMIT 50;";
+        $query = "SELECT code,CAST(date AS DATE) AS 'date',shop,delivery_date,delivery_method,note FROM order_sheet LEFT JOIN shoplist on id=order_shop WHERE shop='".$shop."' ORDER BY code DESC LIMIT 50;";
         $sheetsInfo = DB::select($query);
         echo json_encode($sheetsInfo);
     }
 
-    function createSheet(Request $request, $shop,$date,$method,$source,$comment){
+    function createSheet(Request $request){
+        $shop = $request->shop;
+        $date = $request->date;
+        $staff = $request->user()->id;
+        $method = $request->method;
+        $source = $request->source;
+        $comment = $request->comment;
         if(!$comment == "nocomment"){
             $comment = urldecode($comment);
         }else{
             $comment = "コメントなし";
         }
-        $query = "SELECT id FROM shoplist WEHER shop='".$shop."';";
-        $shopID = DB::select($query);
-        $query = "INSERT INTO order_sheet(date, order_staff, order_shop, delivery_method, delivery_date, note) VALUE(NOW(), ".$request->user()->id.", ".$shopID.", '".$method."', '".$date."', '".$comment."');";
+        $query = "SELECT id FROM shoplist WHERE shop='".$shop."';";
+        $shopID = DB::select($query)[0]->id;
+        $query = "INSERT INTO order_sheet(date, order_staff, order_shop, delivery_method, delivery_date, note) VALUE(NOW(), '".$staff."', '".$shopID."', '".$method."', '".$date."', '".$comment."');";
+        $array = [$shopID,$date,$staff,$method,$source,$comment,$query];
         DB::insert($query);
         $query = "SELECT max(code) AS 'code' FROM order_sheet ;";
         $code = DB::select($query);
