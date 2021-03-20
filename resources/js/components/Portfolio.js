@@ -17,10 +17,12 @@ export default function PortFolio(){
             <div className="ORS-wrapper">
                 <div className="work-title">ORSystem</div>
                 <div className="img-lists">
-                    <div className="work-img workImg4"></div>
-                    <div className="work-img workImg5"></div>
+                    <video className="ORS-mov" autoPlay muted playsInline controls src='/img/portfolio-mov/ORS-mov1.mp4' width="500" height="300"/>
+                    <video className="ORS-mov" autoPlay muted playsInline controls src='/img/portfolio-mov/ORS-mov2.mp4' width="500" height="300"/>
+                    <video className="ORS-mov" autoPlay muted playsInline controls src='/img/portfolio-mov/ORS-mov3.mp4' width="500" height="300"/>
+                    <video className="ORS-mov" autoPlay muted playsInline controls src='/img/portfolio-mov/ORS-mov4.mp4' width="500" height="300"/>
                 </div>
-                <div className="work-introduction"></div>
+                <div className="work-introduction">仮の説明文　ABCDEFGHIJKLMNOPQRSTUVWXYZ あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん</div>
             </div>
         </div>
     );

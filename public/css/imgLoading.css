@@ -13,10 +13,10 @@
     right: 0;
     margin: auto;
     text-indent: -9999em;
-    border-top: 1.1px solid rgba(50, 50, 50, 0.7);
-    border-right: 1.1px solid rgba(50, 50, 50, 0.7);
-    border-bottom: 1.1px solid rgba(50, 50, 50, 0.7);
-    border-left: 1.1px solid #ffffff;
+    border-top: 1.5px solid rgba(34, 34, 34, 0.7);
+    border-right: 1.5px solid rgba(34, 34, 34, 0.7);
+    border-bottom: 1.5px solid rgba(34, 34, 34, 0.7);
+    border-left: 1.5px solid #ffffff;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);

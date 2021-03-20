@@ -117,3 +117,16 @@
         font-size:medium;
     }
 }
+
+@media screen and (max-width:800px){
+    @keyframes hideMessage{
+        0%{
+            opacity:1;
+            font-size: 50px;
+        }
+        100%{
+            opacity:0;
+            font-size:70px;
+        }
+    }
+}

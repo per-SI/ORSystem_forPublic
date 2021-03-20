@@ -50,6 +50,7 @@ function openModal(event){
         }
         $selecter[i].addEventListener('change',async()=>{
             try{
+                orderLoading();
                 let sheetNum = document.getElementById('sheetNum').textContent;
                 $cover.setAttribute('onclick','');
                 const res = await axios.get('/orderandreplace/order/'+sheetNum+"/"+$selecter[i].getAttribute('code')+'/'+$selecter[i].value);
@@ -59,8 +60,9 @@ function openModal(event){
                 for( let k=0; k<h; k++ ){
                     setTargetStickers[k].setAttribute('quantity'+(i+1),$selecter[i].value);
                 }
-                $cover.setAttribute('onclick','closeModal(event)');
 
+                $cover.setAttribute('onclick','closeModal(event)');
+                orderLoaded();
             }catch(error){
                 console.log("error");
             }
@@ -68,4 +70,14 @@ function openModal(event){
     }
 }
 
+function orderLoading(){
+    const $orderCover = document.createElement('div');
+    document.body.appendChild($orderCover);
+    $orderCover.setAttribute('id','orderLoader');
+    $orderCover.setAttribute('class','orderLoader');
+}
 
+function orderLoaded(){
+    const $orderCover = document.getElementById('orderLoader');
+    $orderCover.remove();
+}

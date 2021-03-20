@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{asset("css/orderSheetInfoModal.css")}}">
     <link type="text/css" rel="stylesheet" href="{{asset("css/loading.css")}}">
     <link rel="stylesheet" href="{{asset("css/imgLoading.css")}}">
+    <link rel="stylesheet" href="{{asset("css/orderLoading.css")}}">
 
 </head>
 <body>
