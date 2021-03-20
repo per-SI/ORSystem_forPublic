@@ -2208,9 +2208,39 @@ function PortFolio() {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "work-img PPS-img4"
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
         className: "work-introduction",
-        children: "\u4EEE\u306E\u8AAC\u660E\u6587\u3000ABCDEFGHIJKLMNOPQRSTUVWXYZ \u3042\u3044\u3046\u3048\u304A\u304B\u304D\u304F\u3051\u3053\u3055\u3057\u3059\u305B\u305D\u305F\u3061\u3064\u3066\u3068\u306A\u306B\u306C\u306D\u306E\u306F\u3072\u3075\u3078\u307B\u307E\u307F\u3080\u3081\u3082\u3084\u3086\u3088\u3089\u308A\u308B\u308C\u308D\u308F\u3092\u3093"
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "heading1",
+          children: "\u306A\u305C\u4F5C\u3063\u305F\u306E\u304B"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "intro-sentence1",
+          children: "\u3000\u30A8\u30F3\u30B8\u30CB\u30A2\u3068\u3057\u3066\u524D\u306B\u9032\u3080\u305F\u3081\u306B\u4F5C\u308A\u307E\u3057\u305F\u3002"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "heading1",
+          children: "\u4F5C\u308B\u4E0A\u3067\u5927\u4E8B\u306B\u3057\u305F\u30DD\u30A4\u30F3\u30C8"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "intro-sentence1",
+          children: ["\u3000\u81EA\u5206\u306E\u7D39\u4ECB\u30DA\u30FC\u30B8\u306A\u306E\u3067\u3001\u3067\u304D\u308B\u3060\u3051\u591A\u304F\u306E\u4EBA\u306B\u8AAD\u3093\u3067\u3082\u3089\u3044\u3084\u3059\u304F\u3059\u308B\u305F\u3081\u3001\u30B7\u30F3\u30D7\u30EB\u306A\u69CB\u9020\u306B\u3057\u307E\u3057\u305F\u3002", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "\u3000\u307E\u305F\u3001\u4F55\u306E\u7D39\u4ECB\u3092\u8AAD\u3093\u3067\u3044\u308B\u304B\u611F\u899A\u7684\u306B\u7406\u89E3\u3067\u304D\u308C\u3070\u3068\u3001\u30B3\u30F3\u30DD\u30FC\u30CD\u30F3\u30C8\u6BCE\u306B\u914D\u8272\u3092\u5C11\u3057\u5909\u3048\u305F\u308A\u3082\u3057\u307E\u3057\u305F\u3002"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "heading1",
+          children: "\u6280\u8853"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "intro-sentence1",
+          children: ["\u3000React\u3067\u3059\u3002\u30D7\u30ED\u30B0\u30E9\u30E0\u306E\u69CB\u6210\u81EA\u4F53\u306F\u672C\u5F53\u306B\u30B7\u30F3\u30D7\u30EB\u306B\u4ED5\u4E0A\u304C\u3063\u3066\u3044\u307E\u3059\u3002", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "\u3000\u4F7F\u7528\u30E9\u30A4\u30D6\u30E9\u30EA\u3082\u30B7\u30F3\u30D7\u30EB\u3067\u3001\u52D5\u304D\u3092\u51FA\u3059\u305F\u3081\u306Ereact-transition-group\u3001\u30DA\u30FC\u30B8\u306E\u30EA\u30ED\u30FC\u30C9\u306B\u5BFE\u5FDC\u3059\u308B\u305F\u3081\u306Breact-router-dom\u3092\u4F7F\u3063\u3066\u3044\u307E\u3059\u3002", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "\u3000CSS\u3067\u306E\u30EC\u30A4\u30A2\u30A6\u30C8\u306Fgrid\u3092\u7528\u3044\u3066\u3001\u30EC\u30B9\u30DD\u30F3\u30B7\u30D6\u5BFE\u5FDC\u3055\u305B\u3066\u3044\u307E\u3059\u3002"]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "mysite-link",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+          href: "https://p.explanewworld.com/top",
+          children: "TopLink"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "github-ling",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+          href: "",
+          children: "GitHub"
+        })
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       className: "ORS-wrapper",
@@ -2256,9 +2286,45 @@ function PortFolio() {
           width: "500",
           height: "300"
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
         className: "work-introduction",
-        children: "\u4EEE\u306E\u8AAC\u660E\u6587\u3000ABCDEFGHIJKLMNOPQRSTUVWXYZ \u3042\u3044\u3046\u3048\u304A\u304B\u304D\u304F\u3051\u3053\u3055\u3057\u3059\u305B\u305D\u305F\u3061\u3064\u3066\u3068\u306A\u306B\u306C\u306D\u306E\u306F\u3072\u3075\u3078\u307B\u307E\u307F\u3080\u3081\u3082\u3084\u3086\u3088\u3089\u308A\u308B\u308C\u308D\u308F\u3092\u3093"
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "heading2",
+          children: "\u306A\u305C\u4F5C\u3063\u305F\u306E\u304B"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "intro-sentence2",
+          children: "\u3000\u6240\u5C5E\u3057\u3066\u3044\u308B\u4F1A\u793E\u306E\u5E97\u8217\u306B\u7ACB\u3063\u3066\u3044\u3066\u3001\u3053\u3046\u3044\u3046\u30B7\u30B9\u30C6\u30E0\u304C\u3042\u308C\u3070\u4FBF\u5229\u3060\u308D\u3046\u306A\u3068\u3001\u3075\u3068\u601D\u3063\u305F\u306E\u304C\u304D\u3063\u304B\u3051\u3067\u3059\u3002"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "heading2",
+          children: "\u30B7\u30B9\u30C6\u30E0\u306E\u5FC5\u8981\u6027"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "intro-sentence2",
+          children: "\u3000\u5546\u54C1\u306E\u5165\u66FF\u30FB\u767A\u6CE8\u3067\u3001\u5E97\u8217\u306B\u7279\u5316\u3055\u305B\u305F\u3082\u306E\u3092\u4F5C\u308B\u3053\u3068\u3067\u3001\u4F5C\u696D\u52B9\u7387\u3092\u4E0A\u3052\u3001\u4ED6\u306B\u8CBB\u3084\u305B\u308B\u6642\u9593\u3092\u4F5C\u308A\u51FA\u3059\u3053\u3068\u304C\u3067\u304D\u308B\u3002(\u3068\u308A\u308F\u3051\u5546\u54C1\u6570\u304C\u304B\u306A\u308A\u591A\u3044\u305F\u3081\u3001\u304B\u306A\u308A\u52B9\u7387\u5316\u3055\u308C\u308B\u3002)"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "heading2",
+          children: "\u30B7\u30B9\u30C6\u30E0\u306E\u30DD\u30A4\u30F3\u30C8"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "intro-sentence2",
+          children: ["\u3000\u30B9\u30BF\u30C3\u30D5\u3078\u306E\u8CEA\u554F\u7B49\u304B\u3089\u3001\u5C0E\u5165\u3059\u308B\u3068\u306A\u308B\u3068\u3001\u4ECA\u307E\u3067\u30A2\u30CA\u30ED\u30B0\u3067\u5165\u66FF\u3057\u3066\u3044\u305F\u3068\u304D\u306E\u611F\u899A\u306B\u8FD1\u3044\u3082\u306E\u304C\u5FC5\u8981\u305D\u3046\u3067\u3057\u305F\u3002\u3067\u3059\u306E\u3067\u3001\u5B9F\u969B\u306E\u58C1\u9762\u4E0A\u306E\u5546\u54C1\u304C\u30C7\u30D0\u30A4\u30B9\u306E\u753B\u9762\u4E0A\u306B\u8868\u793A\u3055\u308C\u3066\u3044\u308B\u304B\u306E\u3088\u3046\u306AUI\u306B\u3057\u307E\u3057\u305F\u3002\u305D\u3053\u306B\u3042\u308B\u5546\u54C1\u3092\u30BF\u30C3\u30D7\u3059\u308B\u3088\u3046\u306A\u611F\u899A\u3067\u306E\u767A\u6CE8\u304C\u3001\u624B\u306B\u3082\u3063\u3066\u3044\u308B\u5546\u54C1\u3068\u58C1\u9762\u4E0A\u306E\u5546\u54C1\u3068\u3067\u3001\u5B9F\u969B\u306B\u5165\u66FF\u3057\u3066\u3044\u308B\u3088\u3046\u306A\u611F\u899A\u3067\u306E\u5165\u66FF\u304C\u53EF\u80FD\u3002", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "\u3000\u307E\u305F\u3001\u30B7\u30B9\u30C6\u30E0\u90E8\u306E\u65B9\u3068\u5C11\u3057\u76F8\u8AC7\u3082\u3057\u3001\u5E97\u8217\u4EE5\u5916\u3067\u4F7F\u3044\u7D9A\u3051\u308B\u3067\u3042\u308D\u3046\u65E2\u5B58\u306E\u30B7\u30B9\u30C6\u30E0\u3068\u3082\u3001\u4E92\u63DB\u6027\u304C\u3042\u308B\u3088\u3046\u306B\u8A2D\u8A08\u3057\u307E\u3057\u305F\u3002", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "\u3000\u30B7\u30B9\u30C6\u30E0\u5168\u4F53\u3068\u3057\u3066\u306FSPA\u3067\u306F\u306A\u3044\u3067\u3059\u304C\u3001\u30E1\u30A4\u30F3\u3067\u4F7F\u3046\u767A\u6CE8\u30FB\u5165\u66FF\u30DA\u30FC\u30B8\u306F\u3001\u5B9F\u7528\u6027\u3092\u6C42\u3081\u3066SPA\u3068\u3057\u3066\u8A2D\u8A08\u3057\u3066\u3044\u307E\u3059\u3002"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "heading2",
+          children: "\u6280\u8853"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "intro-sentence2",
+          children: ["\u3000\u306F\u3058\u3081\u3066\u4F5C\u3063\u305FWEB\u30A2\u30D7\u30EA\u3067\u3057\u305F\u306E\u3067\u3001\u751F\u306EJavaScript\u3067\u66F8\u304D\u307E\u3057\u305F\u3002\u30BF\u30C3\u30C1\u30C7\u30D0\u30A4\u30B9\u7528\u306E\u30C9\u30E9\u30C3\u30B0\u30A2\u30F3\u30C9\u30C9\u30ED\u30C3\u30D7\u3082\u751F\u306EJS\u3067\u5B9F\u88C5\u3057\u3066\u3044\u307E\u3059\u3002", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "\u3000\u30D0\u30C3\u30AF\u30A8\u30F3\u30C9\u306Blaravel\u3001\u30DA\u30FC\u30B8\u306E\u30EC\u30F3\u30C0\u30EA\u30F3\u30B0\u306FBlade\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8\u3067\u3002\u30D5\u30ED\u30F3\u30C8\u30A8\u30F3\u30C9\u306FCSS\u3068JS\u3067\u3059\u3002"]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "mysite-link",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+          href: "https://p.explanewworld.com/orderandreplace",
+          children: "\u30C7\u30E2\u30DA\u30FC\u30B8\u3078"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "github-ling",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+          href: "",
+          children: "GitHub"
+        })
       })]
     })]
   });
