@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>レイアウト変更</title>
     <link type="text/css" rel="stylesheet" href="{{asset("css/changeWall.css")}}">
+    <link type="text/css" rel="stylesheet" href="{{asset("css/loading.css")}}">
 </head>
 <body>
+    <div id="loadingCover" class="loadingCover">
+        <div id="spinner" class="spinner"></div>
+        <div id="loadingMessage" class="loadingMessage">Loading...</div>
+    </div>
+
     <h1>レイアウト変更 </h1>
     <h4>ショップ：{{$shop}}　ラック：{{ $wall }}</h4>
     <a href="/ORsystem/{{ $shop }}">発注・入替に戻る</a>
@@ -128,6 +134,7 @@
 
     </form>
 
+<script type="text/javascript" src="{{asset("js/loading.js")}}"></script>
 <script type="text/javascript" src="{{asset("js/changeWall.js")}}"></script>
 <script type="text/javascript" src="{{asset("js/deleteWall.js")}}"></script>
 

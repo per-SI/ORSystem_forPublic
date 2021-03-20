@@ -19,17 +19,24 @@ class sticker{
     //columnセルにステッカーを並べる
     setSticker(){
         let target = document.getElementById("row"+this.y+"column"+this.x);
-        target.firstElementChild.setAttribute('code',this.code);
-        target.firstElementChild.setAttribute('id',this.x+","+this.y);
-        target.firstElementChild.setAttribute('number',this.number);
-        target.firstElementChild.setAttribute('name',this.number);
-        target.firstElementChild.setAttribute('x',this.x);
-        target.firstElementChild.setAttribute('y',this.y);
+        target.children[1].setAttribute('code',this.code);
+        target.children[1].setAttribute('id',this.x+","+this.y);
+        target.children[1].setAttribute('number',this.number);
+        target.children[1].setAttribute('name',this.number);
+        target.children[1].setAttribute('x',this.x);
+        target.children[1].setAttribute('y',this.y);
         if(this.gazou){
-            target.firstElementChild.setAttribute('src',$dir+"/"+this.gazou);
+            target.children[1].setAttribute('src',$dir+"/"+this.gazou);
+            target.children[1].addEventListener('load',function(event){
+                let removeTarget = event.target.parentNode.firstElementChild;
+                removeTarget.remove();
+            })
         }else if(this.code == "-2"){
             target.classList.add('hidden');
-            target.firstElementChild.setAttribute('class','stickerImg');
+            target.children[1].setAttribute('class','stickerImg');
+            target.children[0].remove();
+        }else{
+            target.children[0].remove();
         }
     }
 
@@ -54,6 +61,10 @@ class mainRowColumn{
                 COLUMN.setAttribute("x",h);
                 COLUMN.setAttribute("y",k);
                 COLUMN.draggable = false ;
+
+                let imgLoading = document.createElement('div');
+                imgLoading.setAttribute('class','loader');
+                COLUMN.appendChild(imgLoading);
 
                 let IMG = document.createElement('img');
                 IMG.draggable = true ;
@@ -89,6 +100,7 @@ class otherRowColumn{
 
             COLUMN.setAttribute('class',this.zone+' column imgParent');
             IMG.setAttribute('class','stickerImg touchable');
+
             if(this.zone==="new"){
                 COLUMN.id = "row"+h+"column1000" ;
                 COLUMN.setAttribute("x","1000");

@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="{{asset('css/register.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{asset("css/loading.css")}}">
     <title>itemsに登録</title>
 </head>
 <body>
+    <div id="loadingCover" class="loadingCover">
+        <div id="spinner" class="spinner"></div>
+        <div id="loadingMessage" class="loadingMessage">Loading...</div>
+    </div>
+
     <div id="head">
         <h1>デザイン登録</h1>
         <a class="topLink" href="/orderandreplace">トップページへ戻る</a>
@@ -58,7 +64,7 @@
     <div id="coverPage" class="nocover">
     </div>
 
-
+    <script type="text/javascript" src="{{asset("js/loading.js")}}"></script>
     <script type="text/javascript" src="{{asset('js/register.js')}}" ></script>
     <script type="text/javascript" src="{{asset('js/deleteDesigns.js')}}" ></script>
 

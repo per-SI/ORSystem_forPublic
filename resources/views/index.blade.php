@@ -10,6 +10,8 @@
 </head>
 <body>
 
+
+
     <div class="position-relative vw-100 vh-100" style="background-image: url('{{asset('background_img1.png')}}'); background-color: rgba(247,248,250,0.65); background-blend-mode:hue;">
         <div class="position-absolute" style="top: 5vh; left:4vw;">
             <h2 class="fw-bold" style="color:#c79605; font-size:xx-large; font-weight:">Order <span style="color:rgb(120, 119, 119)">&</span> Replace</h2>
@@ -35,7 +37,6 @@
             <button type="submit" style="border: 1px solid darkgray; color:gray;">ログアウト</button>
         </form>
     </div>
-
 
 
 

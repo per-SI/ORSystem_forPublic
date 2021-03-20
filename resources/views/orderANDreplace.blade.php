@@ -11,9 +11,15 @@
     <link rel="stylesheet" href="{{asset("css/sheetModal.css")}}">
     <link rel="stylesheet" href="{{asset("css/rankModal.css")}}">
     <link rel="stylesheet" href="{{asset("css/orderSheetInfoModal.css")}}">
+    <link type="text/css" rel="stylesheet" href="{{asset("css/loading.css")}}">
+    <link rel="stylesheet" href="{{asset("css/imgLoading.css")}}">
 
 </head>
 <body>
+    <div id="loadingCover" class="loadingCover">
+        <div id="spinner" class="spinner"></div>
+        <div id="loadingMessage" class="loadingMessage">Loading...</div>
+    </div>
 
     <header id="{{$shop}}" name="{{asset('storage/img/')}}">
 
@@ -198,7 +204,7 @@
     <div id="coverPage" class="coverPage" onclick="closeModal(event)"></div>
 
 
-
+    <script type="text/javascript" src="{{asset("js/loading.js")}}"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="{{asset("js/onload.js")}}" ></script>
     <script type="text/javascript" src="{{asset("js/makeXYdata.js")}}" ></script>
