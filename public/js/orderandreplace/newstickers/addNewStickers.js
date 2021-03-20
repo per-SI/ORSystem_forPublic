@@ -28,6 +28,7 @@ document.getElementById('searchBTN').addEventListener('click',async()=>{
     $datalist.innerHTML = "";
     let $word = document.getElementById('word').value ;
     try{
+        orderLoading();//from order.js
         console.log($word);
         const res = await axios.get('/orderandreplace/search/'+$word);
         let code = [];
@@ -81,6 +82,8 @@ document.getElementById('searchBTN').addEventListener('click',async()=>{
 
         }
 
+        orderLoaded();//from order.js
+
     }catch(error){
         console.log(error);
     }
@@ -128,6 +131,7 @@ async function addNewStickers(event){
         selectedNumbers.push("'"+$selected[i].children[0].textContent+"'");
     }
     try{
+        orderLoading();//from order.js
         const res = await axios.get('/orderandreplace/addNewStickers/'+$shop+'/'+codes+'/'+selectedNumbers);
 
         $newParent = document.getElementsByClassName('new');
@@ -173,6 +177,9 @@ async function addNewStickers(event){
         for(let i=0; i<j; j-- ){
             $selected[i].classList.remove("selected");
         }
+
+        orderLoaded();//from order.js
+
     }catch(error){
         console.log(error);
     }

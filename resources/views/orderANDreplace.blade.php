@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ステッカーラック</title>
-    <link type="text/css" rel="stylesheet" href="{{asset("css/sampleWall.css")}}">
-    <link type="text/css" rel="stylesheet" href="{{asset("css/orderModal.css")}}">
-    <link type="text/css" rel="stylesheet" href="{{asset("css/NewStickers.css")}}">
-    <link rel="stylesheet" href="{{asset("css/calendar.css")}}">
-    <link rel="stylesheet" href="{{asset("css/sheetModal.css")}}">
-    <link rel="stylesheet" href="{{asset("css/rankModal.css")}}">
-    <link rel="stylesheet" href="{{asset("css/orderSheetInfoModal.css")}}">
-    <link type="text/css" rel="stylesheet" href="{{asset("css/loading.css")}}">
+    <link rel="stylesheet" href="{{asset("css/orderandreplace/ORwall.css")}}">
+    <link rel="stylesheet" href="{{asset("css/orderandreplace/newStickers.css")}}">
+    <link rel="stylesheet" href="{{asset("css/orderandreplace/order/calendar.css")}}">
+    <link rel="stylesheet" href="{{asset("css/orderandreplace/order/orderModal.css")}}">
+    <link rel="stylesheet" href="{{asset("css/orderandreplace/order/sheetModal.css")}}">
+    <link rel="stylesheet" href="{{asset("css/orderandreplace/order/orderSheetInfoModal.css")}}">
+    <link rel="stylesheet" href="{{asset("css/orderandreplace/order/rankModal.css")}}">
+    <link rel="stylesheet" href="{{asset("css/loading.css")}}">
     <link rel="stylesheet" href="{{asset("css/imgLoading.css")}}">
-    <link rel="stylesheet" href="{{asset("css/orderLoading.css")}}">
+    <link rel="stylesheet" href="{{asset("css/orderandreplace/order/orderLoading.css")}}">
 
 </head>
 <body>
@@ -75,64 +75,7 @@
     <div id="display">
 
         <div id="mainzone">
-{{--        @php $k=0 @endphp
-        @for( $i=0; $i<$rowLength["max(y)"]; ++$i )
 
-            <div class="Row Row{{ $i }}">
-
-            @for( $j=0; $j<$columnLength[$i]["max(x)"]; ++$j )
-
-                @if( $main[$k]["code"] !== -1 && $main[$k]["code"] !== -2 )
-
-                <div class="main column row{{ $i }} column{{ $j }} imgParent"
-                     id="row{{ $i }}column{{ $j }}" x="{{ $j }}" y="{{ $i }}" draggable="false"
-                >
-                   <img class="stickerImg touchable" id="{{$j}},{{$i}}"
-
-                        code="{{$main[$k]['code']}}"
-
-                        number="{{$main[$k]['number']}}"
-
-                        name="{{$main[$k]['number']}}"
-
-                        src="{{asset('storage/img/'.$main[$k]["gazou"])}}"
-
-                        x="{{ $j }}" y="{{ $i }}"
-
-                        draggable="false" onclick="openModal(event)" ondragstart="dragStarted(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondrop="drop(event)"
-                   >
-                </div>
-
-                @elseif( $main[$k]["code"] == -1 )
-
-                <div class="main column row{{ $i }} column{{ $j }} imgParent"
-                     id="row{{ $i }}column{{ $j }}" x="{{ $j }}" y="{{ $i }}"
-                >
-                   <img class="stickerImg touchable" id="{{$j}},{{$i}}" code="-1"
-                        x="{{ $j }}" y="{{ $i }}"
-                        draggable="false" onclick="openModal(event)" ondragstart="dragStarted(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondrop="drop(event)"
-                   >
-                </div>
-
-                @else
-
-                <div class="main column row{{ $i }} column{{ $j }} imgParent hidden"
-                     id="row{{ $i }}column{{ $j }}" x="{{ $j }}" y="{{ $i }}"
-                >
-                   <img class="stickerImg" id="{{$j}},{{$i}}"
-                        x="{{ $j }}" y="{{ $i }}"
-                        draggable="false" onclick="openModal(event)" ondragstart="dragStarted(event)" ondragover="dragOver(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondrop="drop(event)"
-                   >
-                </div>
-
-                @endif
-                @php ++$k @endphp
-            @endfor
-
-            </div>
-
-        @endfor
-        --}}
         </div>
 
     </div>
@@ -206,22 +149,20 @@
 
 
     <script type="text/javascript" src="{{asset("js/loading.js")}}"></script>
+    <script type="text/javascript" src="{{asset("js/orderandreplace/onload.js")}}" ></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script type="text/javascript" src="{{asset("js/onload.js")}}" ></script>
-    <script type="text/javascript" src="{{asset("js/makeXYdata.js")}}" ></script>
-    <script type="text/javascript" src="{{asset("js/DnD.js")}}"></script>
-    <script type="text/javascript" src="{{asset("js/tab.js")}}"></script>
-    <script type="text/javascript" src="{{asset("js/touch.js")}}"></script>
-    <script type="text/javascript" src="{{asset("js/order.js")}}"></script>
-    <script type="text/javascript" src="{{asset("js/temporary.js")}}"></script>
-    <script type="text/javascript" src="{{asset("js/replace.js")}}"></script>
-    <script type="text/javascript" src="{{asset("js/addNewStickers.js")}}"></script>
-    <script type="text/javascript" src="{{asset("js/deleteNewStickers.js")}}"></script>
-    <script type="text/javascript" src="{{asset("js/calendar.js")}}"></script>
-    <script type="text/javascript" src="{{asset("js/ordersheet.js")}}"></script>
-   {{-- <script type="text/javascript" src="{{asset("js/moveWall.js")}}"></script>--}}
-   <script type="text/javascript" src="{{asset("js/closeModal.js")}}"></script>
-   <script type="text/javascript" src="{{asset("js/rankModal.js")}}"></script>
-   <script type="text/javascript" src="{{asset("js/post_test.js")}}"></script>
+    <script type="text/javascript" src="{{asset("js/orderandreplace/DnD/makeXYdata.js")}}" ></script>
+    <script type="text/javascript" src="{{asset("js/orderandreplace/DnD/DnD.js")}}"></script>
+    <script type="text/javascript" src="{{asset("js/orderandreplace/tab.js")}}"></script>
+    <script type="text/javascript" src="{{asset("js/orderandreplace/DnD/touch.js")}}"></script>
+    <script type="text/javascript" src="{{asset("js/orderandreplace/order/order.js")}}"></script>
+    <script type="text/javascript" src="{{asset("js/orderandreplace/DnD/temporary.js")}}"></script>
+    <script type="text/javascript" src="{{asset("js/orderandreplace/DnD/replace.js")}}"></script>
+    <script type="text/javascript" src="{{asset("js/orderandreplace/newstickers/addNewStickers.js")}}"></script>
+    <script type="text/javascript" src="{{asset("js/orderandreplace/newstickers/deleteNewStickers.js")}}"></script>
+    <script type="text/javascript" src="{{asset("js/orderandreplace/order/calendar.js")}}"></script>
+    <script type="text/javascript" src="{{asset("js/orderandreplace/order/ordersheet.js")}}"></script>
+    <script type="text/javascript" src="{{asset("js/orderandreplace/closeModal.js")}}"></script>
+    <script type="text/javascript" src="{{asset("js/orderandreplace/order/rankModal.js")}}"></script>
 </body>
 </html>

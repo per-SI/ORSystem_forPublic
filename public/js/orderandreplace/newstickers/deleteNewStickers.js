@@ -81,6 +81,7 @@ async function deleteNewStickers(event){
         codesS = "0" ;
     }
     try{
+        orderLoading();//from order.js
         const res = await axios.get('/orderandreplace/deleteNewStickers/'+$shop+'/'+codesD+"/"+codesS);
         if(res.data == "UpdateNewStickers"){
             let $selectedToD = document.getElementsByClassName('selectedToD');
@@ -101,6 +102,7 @@ async function deleteNewStickers(event){
                 }
             }
         }
+        orderLoaded();//from order.js
     }catch(error){
         console.log(error);
     }

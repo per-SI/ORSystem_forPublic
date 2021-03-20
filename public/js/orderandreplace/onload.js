@@ -200,5 +200,3 @@ async function moveWall(){
     }
 }
 
-//document.addEventListener('DOMContentLoaded',moveWall())
-

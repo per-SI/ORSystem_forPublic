@@ -18,7 +18,7 @@
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);
-    z-index: 10;
+    z-index: 100;
     background-color: rgba(224, 223, 223, 0.4);
   }
   @-webkit-keyframes load4 {

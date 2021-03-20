@@ -1,10 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-/*
-Route::get('/', function(){
-    return view('app');
-})->where('any', '.*');*/
 
 Auth::routes();
 
@@ -15,18 +11,14 @@ Route::get('/top',function(){
 });
 
 Route::group(['middleware'=>'auth'],function(){
-    /*Route::get('/',function () {
-        return view('welcome');
-    });*/
+
     Route::get('/orderandreplace','App\Http\Controllers\ORController@index');
+
     Route::get('/ORsystem/{shop}','App\Http\Controllers\ORController@showWall');
 
     Route::get('/orderandreplace/newWall','App\Http\Controllers\ORController@newWall');
 
     Route::post('/orderandreplace/createNewWall','App\Http\Controllers\ORController@createNewWall');
-
-    Route::post('/orderandreplace/sample','App\Http\Controllers\ORController@sample');
-
 
     Route::get('/orderandreplace/readData/{numbers}','App\Http\Controllers\ORController@getStickerInfo');
 
@@ -69,11 +61,10 @@ Route::group(['middleware'=>'auth'],function(){
     Route::get('/orderandreplace/getStickerRanking/{startDate}/{endDate}','App\HTTP\Controllers\ORController@getStickerRanking');
 
     Route::post('/orderandreplace/createSheet','App\Http\Controllers\ORController@createSheet');
+
+    Route::get('/orderandreplace/showSheetList/{shop}','App\Http\Controllers\ORController@showSheetList');
+
+    Route::get('/orderandreplace/selectSheet/{code}','App\HTTP\Controllers\ORController@selectSheet');
+
 });
 
-
-Route::get('/orderandreplace/showSheetList/{shop}','App\Http\Controllers\ORController@showSheetList');
-
-Route::get('/orderandreplace/selectSheet/{code}','App\HTTP\Controllers\ORController@selectSheet');
-
-///{shop}/{date}/{method}/{source}/{comment}

@@ -59,26 +59,7 @@ class ORController extends Controller{
         $statement = "INSERT INTO ".$shop."_items"."(code,wall,y,x) VALUE".$insertValue.";" ;
         DB::insert($statement);
 
-        return $this->showWall($shop);
-    }
-
-    public function sample(Request $request){
-        DB::enableQueryLog();
-
-        DB::insert('INSERT INTO sample(sample) VALUE(:input) ;',[$request->input('sample')]);
-
-        $query = DB::getQueryLog();
-        $datas = DB::select('SELECT * FROM sample ');
-        $arr = array();
-        forEach($datas as $data){
-            $arr[] = (array)$data;
-        }
-        $id_array = array();
-        forEach($arr as $ar){
-            $id_array[] = $ar["id"];
-        }
-        array_multisort($id_array,SORT_DESC,SORT_NUMERIC,$arr);
-        dd($query,DB::select('SELECT * FROM sample '),$arr/*WHERE id=:id',['id'=>$request->input('sample')]))*/);
+        return redirect('/'.'ORsystem/'.$shop);
     }
 
     public function showWall($shop){
@@ -631,8 +612,6 @@ class ORController extends Controller{
             $query = "UPDATE ".$shop."_items SET y=1 WHERE wall='new' ;";
             DB::update($query);
         }
-
-
         echo "UpdateNewStickers";
     }
 
@@ -670,9 +649,7 @@ class ORController extends Controller{
         echo json_encode($CodeQuantity);
     }
 
-
     public function order($sheetNum,$pCode,$quantity){
-
         if($quantity !== "-"){
             $query = "INSERT INTO order_items(code_sales,code_product,quantity) VALUE(".$sheetNum.",".$pCode.",".$quantity.") ON DUPLICATE KEY UPDATE quantity=values(quantity) ;";
             DB::insert($query);
@@ -682,7 +659,6 @@ class ORController extends Controller{
             DB::insert($query);
             echo $query;
         }
-
     }
 
     public function getStickerRanking($startDate,$endDate){
@@ -697,8 +673,4 @@ class ORController extends Controller{
         echo json_encode($rankData);
     }
 
-    public function test_post(Request $request){
-        $arr = [$request->user(), $request->name,$request->user()->name,$request->cookie()];
-        echo json_encode($arr);
-    }
 }
