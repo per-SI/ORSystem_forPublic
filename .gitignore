@@ -20,7 +20,7 @@ yarn-error.log
 /database
 /public/*
 !/public/css
-!/publick/js
+!/public/js
 /public/css/PPS
 /public/css/css.transition
 /resources/*
