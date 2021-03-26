@@ -1,3 +1,6 @@
+
+
+
 ## 概要
 #### 発注・入替システム
  
@@ -10,6 +13,9 @@
  　入替に関しては、事前のレイアウト変更とそのチェックができるよう、一時保存機能・一時保存呼出機能も備えています。こうすることで、手を離さないといけない時にも中断ができます。
  　
 #### 参考動画
+
+   <img width="100" height="180" alt="ORS-gif1" src="https://user-images.githubusercontent.com/78603215/112641396-b3025080-8e85-11eb-8570-6d3f5c74a00f.gif">     <img width="100" height="180" alt="ORS-gif2" src="https://user-images.githubusercontent.com/78603215/112641423-ba295e80-8e85-11eb-9cda-cbb97c3b8372.gif">     <img width="100" height="180" alt="ORS_gif3" src="https://user-images.githubusercontent.com/78603215/112641439-be557c00-8e85-11eb-856a-dc664060dd12.gif">
+
 
 ## 機能一覧
 - ログイン（laravel/ui）
