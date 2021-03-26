@@ -1,4 +1,11 @@
 ## 概要
+#### 発注・入替システム
+ 接客やその他作業の傍ら、発注やレイアウト変更のサポートをするシステムです。
+ 発注書を作成し、発注書毎に商品の発注ができるシステムで、発注数によるランキング機能もあります。
+ 入替に関しては、事前のレイアウト変更とそのチェックができるよう、一時保存機能・一時保存呼出機能も備えています。
+ こうすることで、手を離さないといけない時にも中断ができます。
+ 
+#### 参考動画
 
 ## 機能一覧
 - ログイン（laravel/ui）
@@ -16,14 +23,14 @@
 - PHP 7.4.11
 - Laravel 8.27.0
 - MySQL(MariaDB)
-- JavaScript
+- JavaScript（ajaxにはaxios）
 - HTML5
 - CSS3
 - Bootstrap5
 - AWS
   - VPC
-  - EC2
-  - RDS
+  - EC2(t2.micro)
+  - RDS(MySQL)
   - Elastic IP
 - Apache
 - Google Calendar API
